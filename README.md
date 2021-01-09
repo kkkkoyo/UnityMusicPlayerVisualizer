@@ -1,5 +1,7 @@
 # UnityMusicPlayerVisualizer
 
+<img src="https://user-images.githubusercontent.com/19504762/104093526-6075b700-52ce-11eb-9678-10ac4874d426.gif" height="500" alt="img" >
+
 UnityMusicPlayerVisualizer is a Unity plugin that accesses the iOS music library, plays a song and gets the sound level.
 This plugin is inspired by [asus4/UnityMusicPlayerPlugin.](https://github.com/asus4/UnityMusicPlayerPlugin)
 
