@@ -10,6 +10,7 @@ This plugin is inspired by [asus4/UnityMusicPlayerPlugin.](https://github.com/as
 - Xcode12.2
 
 # Features
+Get the song with MPMediaPickerController, play the sound with AVAudioPlayer, and get its sound level with averagePowerForChannel.
 - Accessing music library
 - Play/Stop the song
 - Acquisition of song information
