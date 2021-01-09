@@ -21,4 +21,4 @@ in preparation.
 Download one of the unitypackage files from the Releases page and import it to a project.
 
 # License
-MIT
+[MIT](https://github.com/kkkkoyo/UnityMusicPlayerVisualizer/blob/main/LICENSE)
