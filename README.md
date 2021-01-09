@@ -20,7 +20,7 @@ This plugin is inspired by [asus4/UnityMusicPlayerPlugin.](https://github.com/as
 in preparation.
 
 # Installation
-Download one of the unitypackage files from the Releases page and import it to a project.
+Download one of the unitypackage files from the [Releases](https://github.com/kkkkoyo/UnityMusicPlayerVisualizer/releases) page and import it to a project.
 
 # License
 [MIT](https://github.com/kkkkoyo/UnityMusicPlayerVisualizer/blob/main/LICENSE)
