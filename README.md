@@ -18,7 +18,7 @@ Get the song with MPMediaPickerController, play the sound with AVAudioPlayer, an
 ※ Streaming music such as Apple Music is not supported.
 
 # Documentation
-in preparation.
+[[Unity][iOS] iOSのミュージックライブラリの楽曲を再生し、オーディオビジュアライズする](https://zenn.dev/koyoarai_/articles/21c0193aead7cf0612d6)
 
 # Installation
 Download one of the unitypackage files from the [Releases](https://github.com/kkkkoyo/UnityMusicPlayerVisualizer/releases) page and import it to a project.
