@@ -22,8 +22,8 @@ extern "C" {
         return UnityMusicPlayerPlugin.shared.currentPlaybackTime;
     }
 
-    double _unityMusicPlayer_level() {
-        return UnityMusicPlayerPlugin.shared.getLevelWithChannel;
+    double _unityMusicPlayer_level(int channel) {
+        return [UnityMusicPlayerPlugin.shared getLevelWithChannel:channel];
     }
 }
 
@@ -87,7 +87,7 @@ static UnityMusicPlayerPlugin * _shared;
         @"artist": UnityMusicPlayerPlugin.shared.artist,
         @"duration": [NSNumber numberWithDouble:UnityMusicPlayerPlugin.shared.duration],
         @"currentTime": [NSNumber numberWithDouble:self.currentPlaybackTime],
-        @"level": [NSNumber numberWithDouble:self.getLevelWithChannel]
+        @"level": @0
     };
     NSData *data = [NSJSONSerialization dataWithJSONObject:json options:NSJSONWritingPrettyPrinted error:nil];
     NSString* msg = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
@@ -112,12 +112,11 @@ static UnityMusicPlayerPlugin * _shared;
     return all_duration;
 }
 
--(double)getLevelWithChannel
-{
+- (double) getLevelWithChannel:(int)channel {
     if(avPlayer != nil) {
         if(avPlayer.isPlaying) {
             [avPlayer updateMeters];
-            double db = [avPlayer averagePowerForChannel:0];
+            double db = [avPlayer averagePowerForChannel:channel];
             double power = pow(10, (0.05 * db));
             return power;
         }

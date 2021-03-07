@@ -17,10 +17,10 @@
 @property (atomic, readonly) NSString* artist;
 @property (atomic, readonly) double duration;
 @property (atomic, readonly) double currentPlaybackTime;
-@property (atomic, readonly) double getLevelWithChannel;
 
 + (UnityMusicPlayerPlugin*) shared;
 - (void) load:(UIViewController*)controller;
 - (void) play;
 - (void) selectedPicker;
+- (double) getLevelWithChannel:(int) channel;
 @end

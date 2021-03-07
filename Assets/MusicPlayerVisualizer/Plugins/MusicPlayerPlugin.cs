@@ -125,13 +125,10 @@ namespace MusicPlayer
             }
         }
 
-        public float level
+        public float level(int channel)
         {
-            get
-            {
-                info.level = (float)_unityMusicPlayer_level();
-                return info.level;
-            }
+            info.level = (float)_unityMusicPlayer_level(channel);
+            return info.level;
         }
 
         private void OnApplicationQuit () {
@@ -169,13 +166,13 @@ namespace MusicPlayer
         [DllImport("__Internal")]
         private static extern double _unityMusicPlayer_currentTime();
         [DllImport("__Internal")]
-        private static extern double _unityMusicPlayer_level();
+        private static extern double _unityMusicPlayer_level(int channel);
 #else
         private static void _unityMusicPlayer_load() { }
 
         private static void _unityMusicPlayer_play() { }
         private static double _unityMusicPlayer_currentTime() { return 0; }
-        private static double _unityMusicPlayer_level() { return 0; }
+        private static double _unityMusicPlayer_level(int channel) { return 0; }
 
 #endif
     }

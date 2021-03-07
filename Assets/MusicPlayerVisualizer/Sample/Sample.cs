@@ -47,7 +47,7 @@ namespace MusicPlayer
         void Update()
         {
             double currentTime = MusicPlayerPlugin.Instance.currentTime;
-            float level = MusicPlayerPlugin.Instance.level;
+            float level = MusicPlayerPlugin.Instance.level(0);
             var currentTimeSpan = new TimeSpan(0, 0, (int) currentTime);
             string currentTimeStr = currentTimeSpan.ToString(@"mm\:ss").ToString();
 
